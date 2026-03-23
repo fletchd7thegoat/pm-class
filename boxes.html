@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stacked Boxes No Scroll</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: navy;
+      display: flex;
+      flex-direction: column; /* stack vertically */
+      justify-content: space-around; /* evenly spaced in viewport */
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden; /* prevent scrolling */
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      color: white;
+      border: 6px solid orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+      padding: 0 20px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Rectangle */
+    .rectangle {
+      width: 80%;
+      height: 25vh; /* relative to viewport height */
+      border-radius: 43px;
+      background-color: #FF6B6B;
+    }
+
+    /* Square with arch top */
+    .arch-square {
+      width: 70%;
+      height: 25vh;
+      border-radius: 65px 100px 12px 100px;
+      background-color: #4ECDC4;
+    }
+
+    /* Long oval */
+    .long-oval {
+      width: 60%;
+      height: 25vh;
+      border-radius: 90% / 50%;
+      background-color: #FF0000;
+    }
+
+    /* Ensure text wraps nicely */
+    .box span {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box rectangle"><span>EVERYTHING IS AWESOME! EVERYTHING IS COOL WHEN YOU'RE APART OF A TEAM</span></div>
+  <div class="box arch-square"><span>EVERYTHING IS AWESOME! EVERYTHING IS COOL WHEN YOU'RE APART OF A TEAM</span></div>
+  <div class="box long-oval" id="rainbow-box"><span>EVERYTHING IS AWESOME! EVERYTHING IS COOL WHEN YOU'RE APART OF A TEAM</span></div>
+
+  <script>
+    const rainbowBox = document.getElementById('rainbow-box');
+    const rainbowColors = ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#8B00FF'];
+    let colorIndex = 0;
+
+    rainbowBox.addEventListener('click', () => {
+      colorIndex = (colorIndex + 1) % rainbowColors.length;
+      rainbowBox.style.backgroundColor = rainbowColors[colorIndex];
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Page</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #2b0008; /* darker crimson */
+            font-family: 'Story Script', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .box {
+            width: 260px;
+            padding: 15px;
+            background-color: black;
+            border: 2px solid orange;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .box h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .thumbnail-link img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            display: block;
+        }
+
+        .quote {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- BOX 1 -->
+    <div class="box">
+        <h2>Quote #1</h2>
+        <a class="thumbnail-link" href="https://www.youtube.com/watch?v=BP1zOxcg57E" target="_blank" rel="noopener noreferrer" aria-label="Watch video on YouTube">
+            <img src="https://img.youtube.com/vi/BP1zOxcg57E/hqdefault.jpg" alt="Video thumbnail">
+        </a>
+        <div class="quote">
+            55 BURGERS, 55 FRIES, 55 TACOS, 55 PIES, 55 COKES, 
+            100 TATER TOTS, 100 PIZZAS, 100 TENDERS, 100 MEATBALLS, 
+            100 COFFEES, 55 WINGS, 55 SHAKES, 55 PANCAKES, 
+            55 PASTAS, 55 PEPPERS AND 155 TATERS! - Tim Robinson
+        </div>
+    </div>
+
+    <!-- BOX 2 -->
+    <div class="box">
+        <h2>Quote #2</h2>
+        <a class="thumbnail-link" href="https://www.youtube.com/watch?v=0nKftIRQ92w" target="_blank" rel="noopener noreferrer" aria-label="Watch video on YouTube">
+            <img src="https://img.youtube.com/vi/0nKftIRQ92w/hqdefault.jpg" alt="Video thumbnail">
+        </a>
+        <div class="quote">
+            STOP SIGN, WHAT STOP SIGN MAN, you said stop sign? - Benjamin Robinson
+        </div>
+    </div>
+
+    <!-- BOX 3 -->
+    <div class="box">
+        <h2>Quote #3</h2>
+        <a class="thumbnail-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Watch video on YouTube">
+            <img src="https://via.placeholder.com/300x150?text=Add+Video" alt="Placeholder thumbnail">
+        </a>
+        <div class="quote">Your next quote goes here...</div>
+    </div>
+
+</div>
+
+</body>
+</html>
