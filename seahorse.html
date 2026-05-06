@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Seahorse Serenity</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1e4db7;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(
+    90deg,
+    #1e4db7 0%,
+    #143a8f 55%,
+    #071a3d 100%
+  );
+
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 1000;
+}
+
+/* NAV */
+nav {
+  background-color: #0b1f4d;
+
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 260px;
+  height: calc(100vh - 80px);
+
+  padding: 30px 20px 20px 20px;
+  overflow-y: auto;
+}
+
+/* NAV LINKS */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 15px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #cfe3ff;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+
+/* HOVER EFFECT */
+nav a:hover {
+  color: #cc6a00;
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+/* ARTICLE */
+article {
+  margin-left: 260px;
+  margin-top: 100px;
+
+  padding: 40px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+
+  align-items: start;
+  background: #1e4db7;
+}
+
+/* FACT BOX */
+.outer-box {
+  background: #1e4db7;
+  padding: 10px;
+}
+
+.inner-box {
+  background: white;
+  padding: 30px;
+}
+
+/* IMAGE BOX */
+.image-box {
+  background: #d6e6ff;
+  padding: 15px;
+  width: 100%;
+
+  position: sticky;
+  top: 100px;
+  border-radius: 12px;
+}
+
+/* IMAGE */
+.image-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* CAPTION */
+.caption {
+  margin-top: 10px;
+  text-align: center;
+  color: #1e4db7;
+  font-weight: bold;
+}
+
+/* TEXT */
+h1, h2 {
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  margin-left: 260px;
+  background-color: #1e4db7;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>Seahorse Serenity</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#">Seahorse Home</a></li>
+    <li><a href="#">Seahorse News</a></li>
+    <li><a href="#">Seahorse Science</a></li>
+    <li><a href="#">Seahorse Fiction</a></li>
+    <li><a href="#">Seahorse Fables</a></li>
+    <li><a href="#">Seahorse Songs</a></li>
+  </ul>
+</nav>
+
+<article>
+
+  <div class="outer-box">
+    <div class="inner-box">
+
+      <h1>SEAHORSE FACTS</h1>
+
+      <h2>Name</h2>
+      <p>The Latin name for seahorse is Hippocampus which means "Horse Caterpillar"</p>
+
+      <h2>What is a Seahorse</h2>
+      <p>Seahorses are fish. They live in water, breathe through gills and have a swim bladder.</p>
+
+      <h2>Eyesight</h2>
+      <p>Seahorses have excellent eyesight and can move each eye independently.</p>
+
+      <h2>Snout</h2>
+      <p>Seahorses use their snouts like a vacuum to suck up food.</p>
+
+      <h2>Diet</h2>
+      <p>Seahorses eat small crustacea such as Mysis Shrimp.</p>
+
+      <h2>Tail</h2>
+      <p>They use their tail to grip plants and stay stable in water.</p>
+
+      <h2>Colour</h2>
+      <p>Seahorses can change colour to match their surroundings.</p>
+
+      <h2>Body</h2>
+      <p>They have bony plates instead of scales.</p>
+
+    </div>
+  </div>
+
+  <div class="image-box">
+    <img src="seahorse.jpg" alt="Seahorse">
+    <div class="caption">
+      The highest quality seahorse photo I could find.
+    </div>
+  </div>
+
+</article>
+
+<footer>
+  <p>&copy; Seahorse Serenity 2026</p>
+</footer>
+
+</body>
+</html>
