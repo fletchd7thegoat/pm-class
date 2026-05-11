@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Positioned Boxes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: white;
+      height: 200vh; /* makes scrolling noticeable */
+    }
+
+    .box {
+      width: 220px;
+      height: 220px;
+    }
+
+    /* Colors */
+    .red { background: #ff4d4d; }
+    .orange { background: #ff944d; }
+    .yellow { background: #ffd633; }
+    .green { background: #4dff88; }
+    .blue { background: #4da6ff; }
+    .purple { background: #b84dff; }
+
+    /* RED - fixed top right */
+    .red {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+
+    /* ORANGE - relative (stays in flow, visually near top right area) */
+    .orange {
+      position: relative;
+      margin-left: auto;     /* pushes it right */
+      margin-right: 20px;
+      margin-top: 20px;
+    }
+
+    /* YELLOW - sticky on right side under red */
+    .yellow {
+      position: sticky;
+      top: 260px;           /* sticks after scrolling past this point */
+      margin-left: auto;
+      margin-right: 20px;
+      margin-top: 40px;
+    }
+
+    /* BLUE - absolute (placed independently of flow) */
+    .blue {
+      position: absolute;
+      top: 600px;
+      left: 100px;
+    }
+
+    /* PURPLE - static (default behavior) */
+    .purple {
+      position: static;
+      margin-top: 700px;
+      margin-left: 60px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="box red"></div>
+  <div class="box orange"></div>
+  <div class="box yellow"></div>
+  <div class="box blue"></div>
+  <div class="box purple"></div>
+
+</body>
+</html>
